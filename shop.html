@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Hello Hope Canada</title>
+    <meta name="description" content="Shop Hello Hope Canada merchandise and support our mission.">
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1497149528035279');
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1497149528035279&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="logos/red/red_Red 180x180.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="logos/red/red_Red 96x96.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="logos/red/red_Red 48x48.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/shop.css">
+    <link rel="stylesheet" href="styles/cart.css">
+    <link rel="stylesheet" href="components/header.css">
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header-placeholder"></div>
+
+    <!-- Shop Hero Section -->
+    <section class="shop-hero">
+        <div class="container">
+            <div class="section_title">
+                <h1 class="primary_title">SHOP</h1>
+            </div>
+            <p class="subtitle_description">
+                Support Hello Hope Canada with our exclusive merchandise
+            </p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <!-- Loading State -->
+            <div id="loading-state" class="loading-state">
+                <div class="loading-spinner"></div>
+                <p>Loading products...</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="error-state" class="error-state" style="display: none;">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13,13H11V7H13M13,17H11V15H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/>
+                </svg>
+                <h3>Unable to Load Products</h3>
+                <p>Please check your connection and try again.</p>
+                <button onclick="location.reload()" class="btn-retry">Retry</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="products-grid" class="products-grid" style="display: none;">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-overlay"></div>
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"/>
+                    </svg>
+                    Your Cart
+                </h2>
+                <button id="close-cart" class="close-cart" aria-label="Close cart">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+
+            <div class="cart-footer">
+                <!-- Discount Code Section -->
+                <div id="discount-section" class="discount-section">
+                    <div class="discount-input-group">
+                        <label for="discount-code" class="discount-label">Discount Code</label>
+                        <div class="discount-code-input-container">
+                            <input
+                                type="text"
+                                id="discount-code"
+                                class="discount-code-input"
+                                placeholder="Enter code"
+                                maxlength="20"
+                            >
+                            <button type="button" id="apply-discount" class="btn-apply-discount" disabled>
+                                Apply
+                            </button>
+                        </div>
+                        <p id="discount-message" class="discount-message"></p>
+                    </div>
+
+                    <!-- Free Item Selection (shown when discount is valid) -->
+                    <div id="free-item-selector" class="free-item-selector" style="display: none;">
+                        <h4>Select Free Item:</h4>
+                        <div id="free-item-options" class="free-item-options">
+                            <!-- Options will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <div id="shipping-method-section" class="shipping-method-section">
+                    <h4 class="shipping-method-title">Delivery Method</h4>
+                    <div class="shipping-method-options" role="radiogroup" aria-label="Delivery method">
+                        <label class="shipping-method-option">
+                            <input type="radio" name="shipping-method" id="shipping-method-ship" value="ship" checked>
+                            <span>Ship to address (+$15.00)</span>
+                        </label>
+                        <label class="shipping-method-option">
+                            <input type="radio" name="shipping-method" id="shipping-method-pickup" value="pickup">
+                            <span>Local pickup (Free)</span>
+                        </label>
+                    </div>
+                    <p id="pickup-note" class="pickup-note" style="display: none;">For local pickup address, call <a href="tel:+14169931900">(416) 993-1900</a>.</p>
+                </div>
+
+                <div class="cart-totals">
+                    <div class="cart-subtotal">
+                        <span>Subtotal:</span>
+                        <span id="cart-subtotal">$0.00</span>
+                    </div>
+                    <div id="cart-discount" class="cart-discount" style="display: none;">
+                        <span>Discount:</span>
+                        <span id="cart-discount-amount">-$0.00</span>
+                    </div>
+                    <div class="cart-shipping">
+                        <span>Shipping:</span>
+                        <span id="cart-shipping">$0.00</span>
+                    </div>
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span id="cart-total">$0.00</span>
+                    </div>
+                </div>
+                <div id="paypal-button-container" style="margin-top: 1.5rem;"></div>
+                <button id="checkout-button" class="btn-checkout" style="display: none;">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                    </svg>
+                    Proceed to Checkout
+                </button>
+                <p class="checkout-note">Secure payment processed by PayPal</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Component - Loaded dynamically -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="scripts/cart.js"></script>
+    <script src="scripts/shop.js"></script>
+    <script src="scripts/cart-modal.js"></script>
+</body>
+</html>

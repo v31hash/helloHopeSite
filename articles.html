@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Articles and blog posts from Hello Hope Canada - Stories of hope, character education, and positive change.">
+  <meta name="keywords" content="blog, articles, hope, character education, stories, inspiration">
+  <meta name="author" content="Hello Hope Canada">
+
+  <title>Articles - Hello Hope Canada</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4W2D1MV9MZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4W2D1MV9MZ');
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1497149528035279');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1497149528035279&ev=PageView&noscript=1" />
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <!-- Preload critical resources -->
+  <link rel="preload" href="styles/main.css" as="style">
+  <link rel="preload" href="scripts/main.js" as="script">
+
+  <!-- Preload Minion Pro fonts -->
+  <link rel="preload" href="fonts/minion_variable_woff/MinionPro-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/minion_variable_woff/MinionPro-Bold.woff" as="font" type="font/woff" crossorigin>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="logos/red/red_Red 36x36.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="logos/red/red_Red 24x24.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="logos/red/red_Red 180x180.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="components/header.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/modal.css">
+  <link rel="stylesheet" href="styles/cart.css">
+  <link rel="stylesheet" href="styles/articles.css">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hellohope.ca/articles">
+  <meta property="og:title" content="Articles - Hello Hope Canada">
+  <meta property="og:description" content="Articles and blog posts from Hello Hope Canada - Stories of hope, character education, and positive change.">
+  <meta property="og:image" content="logos/red/red_Red 1080 x 1080.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://hellohope.ca/articles">
+  <meta property="twitter:title" content="Articles - Hello Hope Canada">
+  <meta property="twitter:description" content="Articles and blog posts from Hello Hope Canada - Stories of hope, character education, and positive change.">
+  <meta property="twitter:image" content="logos/red/red_Red 1080 x 1080.png">
+</head>
+<body>
+  <!-- Header Component - Loaded dynamically -->
+  <div id="header-placeholder"></div>
+
+  <section id="articles-hero" class="articles-hero">
+    <div class="section_container">
+      <div class="section_title">
+        <div class="section_subtitle">
+          <div class="subtitle_header">
+                        <svg class="pattern" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M542.22 32.05c-54.8 3.11-163.72 14.43-230.96 55.59-4.64 2.84-7.27 7.89-7.27 13.17v363.87c0 11.55 12.63 18.85 23.28 13.49 69.18-34.82 169.23-44.32 218.7-46.92 16.89-.89 30.02-14.43 30.02-30.66V62.75c.01-17.71-15.35-31.74-33.77-30.7zM264.73 87.64C197.5 46.48 88.58 35.17 33.78 32.05 15.36 31.01 0 45.04 0 62.75V400.6c0 16.24 13.13 29.78 30.02 30.66 49.49 2.6 149.59 12.11 218.77 46.95 10.62 5.35 23.21-1.94 23.21-13.46V100.63c0-5.29-2.62-10.14-7.27-12.99z"/></svg>
+            <span class="subtitle_word">READ</span>
+          </div>
+        </div>
+        <h1>Articles & Stories</h1>
+        <p class="subtitle_description">Discover inspiring stories of hope, character education, and positive change.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="articles-content" class="articles-content">
+    <div class="section_container">
+      <!-- Loading State -->
+      <div id="loading-state" class="loading-state">
+        <div class="loading-spinner"></div>
+        <p>Loading articles...</p>
+      </div>
+
+      <!-- Error State -->
+      <div id="error-state" class="error-state" style="display: none;">
+        <h3>Unable to Load Articles</h3>
+        <p>Please try again later.</p>
+        <button id="retry-btn" class="retry-btn">Try Again</button>
+      </div>
+
+      <!-- Articles Grid -->
+      <div id="articles-grid" class="articles-grid" style="display: none;">
+        <!-- Articles will be dynamically inserted here -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="empty-state" class="empty-state" style="display: none;">
+        <h3>No Articles Yet</h3>
+        <p>Check back soon for new stories and insights.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Component - Loaded dynamically -->
+  <div id="footer-placeholder"></div>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      // Load EmailJS configuration from server
+      fetch('/api/config')
+        .then(response => response.json())
+        .then(config => {
+          emailjs.init({
+            publicKey: config.emailjs.publicKey,
+          });
+        })
+        .catch(error => {
+          console.error('Failed to load EmailJS configuration:', error);
+        });
+    })();
+  </script>
+
+  <script src="components/header.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="scripts/cart.js"></script>
+  <script src="scripts/cart-modal.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/articles.js"></script>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-overlay"></div>
+    <div class="cart-modal-content">
+      <div class="cart-modal-header">
+        <h2>
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"/>
+          </svg>
+          Your Cart
+        </h2>
+        <button id="close-cart" class="close-cart" aria-label="Close cart">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/>
+          </svg>
+        </button>
+      </div>
+
+      <div id="cart-items" class="cart-items">
+        <!-- Cart items will be dynamically inserted here -->
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Subtotal:</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <div id="paypal-button-container" style="margin-top: 1.5rem;"></div>
+        <button id="checkout-button" class="btn-checkout" style="display: none;">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+          </svg>
+          Proceed to Checkout
+        </button>
+        <p class="checkout-note">Secure payment processed by PayPal</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

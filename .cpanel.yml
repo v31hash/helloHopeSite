@@ -1,4 +1,0 @@
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/venture3/hellohope.venture31.com/
-    - /bin/rsync -avz * $DEPLOYPATH

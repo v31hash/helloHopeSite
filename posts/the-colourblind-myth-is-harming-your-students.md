@@ -2,7 +2,7 @@
 title: "The Colourblind Myth Is Harming Your Students"
 excerpt: "A teacher told me she doesn't see colour. She said it like it was a compliment. It's not. It's erasure. When you say you don't see colour, you think you're saying 'I treat everyone equally.' What students of colour hear is 'I don't see you.'"
 author: "Aubrey Noronha"
-featuredImage: "https://storage.googleapis.com/hello-hope/color_blind_2.png"
+featuredImage: "/media-cdn/color_blind_2.png"
 tags: ["education", "anti-racism", "equity", "colourblind", "systemic-racism"]
 published: true
 publishDate: "2025-12-03T04:22:26.831Z"

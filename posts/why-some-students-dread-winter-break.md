@@ -2,7 +2,7 @@
 title: "Why Some Students Dread Winter Break (And What You Can Do About It)"
 excerpt: "Not all students are excited about winter break. Some are dreading it. We send students off in December with 'Have a great break!' like we're doing them a favor. For a lot of kids, we're not—we're sending them to chaos, dysfunction, or complete isolation."
 author: "Aubrey Noronha"
-featuredImage: "https://storage.googleapis.com/hello-hope/dread_winter.png"
+featuredImage: "/media-cdn/dread_winter.png"
 tags: ["mental-health", "education", "isolation", "winter-break", "student-support"]
 published: true
 publishDate: "2025-12-03T04:22:24.831Z"

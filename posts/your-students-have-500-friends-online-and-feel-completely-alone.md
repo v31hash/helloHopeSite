@@ -2,7 +2,7 @@
 title: "Your Students Have 500 Friends Online and Feel Completely Alone"
 excerpt: "A Grade 9 student told me she has 1,200 Instagram followers and can't name five real friends. That's not a social media problem. That's a crisis. Your students have more ways to stay in contact than any generation in history, but they're lonelier than ever."
 author: "Aubrey Noronha"
-featuredImage: "https://storage.googleapis.com/hello-hope/500_online.png"
+featuredImage: "/media-cdn/500_online.png"
 tags: ["mental-health", "social-media", "loneliness", "connection", "friendship"]
 published: true
 publishDate: "2025-12-03T04:22:25.831Z"

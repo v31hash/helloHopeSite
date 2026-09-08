@@ -525,6 +525,7 @@ body {
     text-align: center;
     gap: 5em;
     z-index: 1;
+    overflow: hidden;
 }
 
 .an_event_for h1 {

@@ -370,7 +370,7 @@ body {
 } */
 
 .hero_middle h1 {
-    font-size: 5rem;
+    font-size: 7rem;
     color: rgb(255, 255, 255);
     font-weight: 700;
     line-height: 0.9;
@@ -489,21 +489,6 @@ body {
 .hero_location {
     display: flex;
     flex-direction: column;
-    /* align-items: end; */
-    position: relative;
-    z-index: 2;
-}
-
-.hero_location {
-    text-align: right;
-}
-
-.hero_dates h1,
-.hero_location h1 {
-    font-size: 3rem;
-    font-weight: 400;
-    margin: 0;
-    letter-spacing: 3px;
 }
 
 .hero_bottom h1 {

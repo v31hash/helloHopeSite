@@ -511,7 +511,13 @@ body {
     height: 50px;
     margin-bottom: 1.3rem;}
 
+.conference_video_section {
+    background: #000;
+}
 
+.conference_video_section .featured_video_text h2 {
+    color: #fff;
+}
 
 
 

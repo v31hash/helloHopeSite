@@ -1652,6 +1652,16 @@ body {
     overflow: hidden;
 }
 
+.old_price {
+    text-decoration: line-through;
+    opacity: 0.55;
+    font-weight: 400;
+}
+
+.new_price {
+    color: var(--primary-color);
+}
+
 
 
 /* Animated gradient background */

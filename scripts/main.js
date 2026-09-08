@@ -355,9 +355,9 @@ document.addEventListener('DOMContentLoaded', function() {
 // Conference About Image Animation
 document.addEventListener('DOMContentLoaded', function() {
     const aboutSection = document.querySelector('.conference_about');
-    const aboutImageWrappers = document.querySelectorAll('.about-image-wrapper');
+    const aboutImageWrapper = document.querySelector('.about-image-wrapper');
     
-    if (!aboutSection || aboutImageWrappers.length === 0) return;
+    if (!aboutSection || !aboutImageWrapper) return;
     
     // Check for reduced motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -374,11 +374,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Add animation class to trigger the overlay reveal animation
                 if (!prefersReducedMotion) {
                     setTimeout(() => {
-                        aboutImageWrappers.forEach(wrapper => wrapper.classList.add('animate-in'));
+                        aboutImageWrapper.classList.add('animate-in');
                     }, 300); // Small delay for better visual effect
                 } else {
                     // For users who prefer reduced motion, remove overlay immediately
-                    aboutImageWrappers.forEach(wrapper => wrapper.classList.add('animate-in'));
+                    aboutImageWrapper.classList.add('animate-in');
                 }
                 
                 // Stop observing after animation is triggered

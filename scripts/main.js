@@ -332,6 +332,11 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.hero-word-3')?.classList.add('animate-in');
         }, 3800);
         
+        // "2027" fade in starts after CONFERENCE completes
+        setTimeout(() => {
+            document.querySelector('.hero-word-4')?.classList.add('animate-in');
+        }, 4400);
+        
     } else {
         // For users who prefer reduced motion, show content immediately
         heroSection.classList.add('loaded');

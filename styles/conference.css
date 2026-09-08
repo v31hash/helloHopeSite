@@ -361,6 +361,15 @@ body {
     margin-bottom: 0;
 }
 
+.hero_middle p {
+    font-size: 1.35rem;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 600px;
+    text-align: center;
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
 /* .hero_middle h3:last-child {
     font-size: 2.3rem;
     font-weight: 500;

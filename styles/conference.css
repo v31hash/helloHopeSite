@@ -767,7 +767,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 100%;
+    /* width: 100%; */
     gap: 2rem 2rem;
     row-gap: 10rem;
 }

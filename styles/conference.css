@@ -122,6 +122,7 @@ body {
 .conference_hero {
     min-height: calc(100vh - 109px);
     display: flex;
+    background: #1a1a1a url('/media-cdn/black-cardboard-texture-as.jpg') no-repeat center center / cover;
     flex-direction: column;
     justify-content: space-between;
     background-color: #1a1a1a;

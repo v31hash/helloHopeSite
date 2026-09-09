@@ -109,32 +109,41 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (!countdownElement) return;
     
-    // Target date: May 12th, 2026
-    const targetDate = new Date('2027-04-22T18:00:00').getTime();
+    // Target date: April 22, 2027, 6:00 PM (conference start time)
+    const targetDate = new Date('2027-04-22T18:00:00');
     
     function updateCountdown() {
-        const now = new Date().getTime();
-        const timeRemaining = targetDate - now;
-        
-        if (timeRemaining <= 0) {
-            countdownElement.textContent = 'Event Started!';
+        const now = new Date();
+         if (now >= targetDate) {
+            countdownElement.innerHTML = '<div class="countdown_unit"><span class="countdown_number">Event Started!</span></div>';
             return;
+         }
+
+        // Calendar-accurate months/days remaining (accounts for varying month lengths)
+        let months = (targetDate.getFullYear() - now.getFullYear()) * 12 + (targetDate.getMonth() - now.getMonth());
+        let dateAfterMonths = new Date(now);
+        dateAfterMonths.setMonth(dateAfterMonths.getMonth() + months);
+
+        if (dateAfterMonths > targetDate) {
+            months--;
+            dateAfterMonths = new Date(now);
+            dateAfterMonths.setMonth(dateAfterMonths.getMonth() + months);
         }
         
         // Calculate time units
-        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+        const remainderMs = targetDate - dateAfterMonths;
+        const days = Math.floor(remainderMs / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((remainderMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((remainderMs % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((remainderMs % (1000 * 60)) / 1000);
         
-        // Format with leading zeros for consistency
-        const formattedDays = String(days).padStart(3, '0');
-        const formattedHours = String(hours).padStart(2, '0');
-        const formattedMinutes = String(minutes).padStart(2, '0');
-        const formattedSeconds = String(seconds).padStart(2, '0');
-        
-        // Update the countdown display
-        countdownElement.textContent = `${formattedDays} : ${formattedHours} : ${formattedMinutes} : ${formattedSeconds}`;
+        countdownElement.innerHTML = `
+            <div class="countdown_unit"><span class="countdown_number">${months}</span><span class="countdown_label">Months</span></div>
+            <div class="countdown_unit"><span class="countdown_number">${days}</span><span class="countdown_label">Days</span></div>
+            <div class="countdown_unit"><span class="countdown_number">${String(hours).padStart(2, '0')}</span><span class="countdown_label">Hrs</span></div>
+            <div class="countdown_unit"><span class="countdown_number">${String(minutes).padStart(2, '0')}</span><span class="countdown_label">Min</span></div>
+            <div class="countdown_unit"><span class="countdown_number">${String(seconds).padStart(2, '0')}</span><span class="countdown_label">Sec</span></div>
+        `;
     }
     
     // Update countdown immediately

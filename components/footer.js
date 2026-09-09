@@ -125,7 +125,7 @@ class FooterComponent {
                   </a>
                 </div>
               </div>
-              <a class="website_by" href="https://rep.company" target="_blank">Website By <span>rep.</span></a>
+              <a class="website_by" href="https://venture31.com" target="_blank">Powered By <span>Venture31</span></a>
             </div>
           </div>
         </footer>

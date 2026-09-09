@@ -120,9 +120,10 @@ body {
 }
 
 .conference_hero {
-    height: calc(100vh - 109px);
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    min-height: calc(100vh - 109px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #1a1a1a;
     padding: 3rem;
     position: relative;

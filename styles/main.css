@@ -178,6 +178,38 @@ p {
   background-color: #9a1825;
 }
 
+/* Countdown Timer */
+.countdown {
+    background-color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+.countdown_unit {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+}
+
+.countdown_number {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.countdown_label {
+    font-size: 0.7rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    opacity: 0.75;
+}
+
 /* Sound Toggle Button */
 .sound-toggle {
   position: absolute;

@@ -834,11 +834,12 @@ body {
 
 .video_play_btn {
     position: absolute;
-    bottom: 12px;
-    right: 12px;
+    bottom: 50px;
+    right: 50px;
     width: 44px;
     height: 44px;
-    background-color: rgba(0, 0, 0, 0.7);
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    background-color: var(--primary-color);
     color: #838382;
     border-radius: 50%;
     display: flex;
@@ -846,13 +847,13 @@ body {
     justify-content: center;
     font-size: 1.1rem;
     text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    /* transition: background-color 0.2s ease, transform 0.2s ease; */
     z-index: 5;
 }
 
 .video_play_btn:hover {
-    background-color: var(--primary-color);
-    transform: scale(1.1);
+    /* background-color: var(--primary-color); */
+    /* transform: scale(1.1); */
 }
 
 .pro img {

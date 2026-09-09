@@ -898,6 +898,34 @@ body {
     opacity: 1;
 }
 
+/* Testimonials */
+.conference_testimonials {
+    background-color: #000;
+    top: 0;
+}
+
+.conference_testimonials .testimonial_card {
+    /* background-image: url('/logos/pattern/patter_white_nobg.png');
+    border-color: rgba(255, 255, 255, 0.15); */
+}
+
+.conference_testimonials .testimonial_text {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.conference_testimonials .testimonial_author {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.conference_testimonials .subtitle_word,
+.conference_testimonials h1 {
+    color: #fff;
+}
+
+.conference_testimonials .subtitle_description {
+    color: rgba(255, 255, 255, 0.7);
+}
+
 /* Speaker Modal Styles */
 .speaker-modal {
     position: fixed;

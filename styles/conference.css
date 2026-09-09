@@ -522,7 +522,7 @@ body {
 
 
 .an_event_for {
-    height: 100vh;
+    min-height: 100vh;
     background-color: black;
     display: flex;
     flex-direction: column;

@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!countdownElement) return;
     
     // Target date: May 12th, 2026
-    const targetDate = new Date('2026-05-12T00:00:00').getTime();
+    const targetDate = new Date('2027-04-22T18:00:00').getTime();
     
     function updateCountdown() {
         const now = new Date().getTime();

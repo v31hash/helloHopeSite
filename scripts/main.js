@@ -114,7 +114,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function updateCountdown() {
         const now = new Date();
-         if (now >= targetDate) {
+        if (now >= targetDate) {
+            // Message to display when countdown is finishes
             countdownElement.innerHTML = '<div class="countdown_unit"><span class="countdown_number">Event Started!</span></div>';
             return;
          }

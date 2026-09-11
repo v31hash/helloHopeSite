@@ -835,8 +835,8 @@ body {
 
 .video_play_btn {
     position: absolute;
-    bottom: 330px;
-    right: 248px;
+    bottom: 230px;
+    right: 148px;
     width: 44px;
     height: 44px;
     /* background-color: rgba(0, 0, 0, 0.7); */

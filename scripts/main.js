@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!countdownElement) return;
     
     // Target date: April 22, 2027, 6:00 PM (conference start time)
-    const targetDate = new Date('2027-04-22T18:00:00');
+    const targetDate = new Date('2027-04-01T18:00:00');
     
     function updateCountdown() {
         const now = new Date();

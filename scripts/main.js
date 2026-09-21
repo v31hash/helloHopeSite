@@ -105,9 +105,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Conference Countdown Timer Functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const countdownElement = document.querySelector('.countdown');
+    const countdownElements = document.querySelectorAll('.countdown');
     
-    if (!countdownElement) return;
+    if (countdownElements.length === 0) return;
     
     // Target date: April 22, 2027, 6:00 PM (conference start time)
     const targetDate = new Date('2027-04-01T18:00:00');
@@ -116,7 +116,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const now = new Date();
         if (now >= targetDate) {
             // Message to display when countdown is finishes
-            countdownElement.innerHTML = '<div class="countdown_unit"><span class="countdown_number">Event Started!</span></div>';
+            countdownElements.forEach(el => {
+                el.innerHTML = '<div class="countdown_unit"><span class="countdown_number">Event Started!</span></div>';
+            });
             return;
          }
 
@@ -138,13 +140,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const minutes = Math.floor((remainderMs % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((remainderMs % (1000 * 60)) / 1000);
         
-        countdownElement.innerHTML = `
+        const html = `
             <div class="countdown_unit"><span class="countdown_number">${months}</span><span class="countdown_label">Months</span></div>
             <div class="countdown_unit"><span class="countdown_number">${days}</span><span class="countdown_label">Days</span></div>
             <div class="countdown_unit"><span class="countdown_number">${String(hours).padStart(2, '0')}</span><span class="countdown_label">Hrs</span></div>
             <div class="countdown_unit"><span class="countdown_number">${String(minutes).padStart(2, '0')}</span><span class="countdown_label">Min</span></div>
             <div class="countdown_unit"><span class="countdown_number">${String(seconds).padStart(2, '0')}</span><span class="countdown_label">Sec</span></div>
         `;
+
+        countdownElements.forEach(el => {
+            el.innerHTML = html;
+        })
     }
     
     // Update countdown immediately

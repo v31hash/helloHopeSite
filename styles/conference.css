@@ -179,6 +179,44 @@ body {
     color: white;
 }
 
+.hero_announcement_bar {
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+    .hero_tagline {
+        font-size: 2rem;
+        font-weight: 200;
+        color: #fed14d;
+        margin: 0;
+    }
+
+    .hero_datetime {
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        margin: 0;
+    }
+
+    .hero_location_line {
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        opacity: 0.85;
+        margin: 0;
+    }
+
+.space {
+    margin-top: 25px;
+}
+
 /* Initial state for hero elements - hidden for page load animation */
 .hero_top,
 .hero_middle,

@@ -122,10 +122,10 @@ body {
 .conference_hero {
     min-height: calc(100vh - 109px);
     display: flex;
-    background: #1a1a1a url('/media-cdn/black-cardboard-texture-as.jpg') no-repeat center center / cover;
+    background: #1a1a1a url('/media/stock/handsUp-bigGroup.jpg') no-repeat center center / cover;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #1a1a1a;
+    /* background-color: #1a1a1a; */
     padding: 3rem;
     position: relative;
     z-index: 10;
@@ -191,21 +191,21 @@ body {
 }
 
     .hero_tagline {
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: 200;
         color: #fed14d;
         margin: 0;
     }
 
     .hero_datetime {
-        font-size: 1.3rem;
+        font-size: 2rem;
         font-weight: 700;
         letter-spacing: 0.03em;
         margin: 0;
     }
 
     .hero_location_line {
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-weight: 600;
         letter-spacing: 0.05em;
         text-transform: uppercase;

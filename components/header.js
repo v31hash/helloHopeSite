@@ -94,7 +94,7 @@ class HeaderComponent {
                   <span class="nav-text-hover">Programs</span>
                 </span>
               </a>
-              <a href="/shop" class="nav-link" data-page="shop">
+            //   <a href="/shop" class="nav-link" data-page="shop">
                 <span class="nav-text">
                   <span class="nav-text-original">Shop</span>
                   <span class="nav-text-hover">Shop</span>
@@ -161,7 +161,7 @@ class HeaderComponent {
                   <span class="nav-text-hover">Programs</span>
                 </span>
               </a>
-              <a href="/shop" class="mobile_nav_link" data-page="shop">
+            //   <a href="/shop" class="mobile_nav_link" data-page="shop">
                 <span class="nav-text">
                   <span class="nav-text-original">Shop</span>
                   <span class="nav-text-hover">Shop</span>

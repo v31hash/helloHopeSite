@@ -1774,6 +1774,23 @@ body {
     overflow: hidden;
 }
 
+.ticket{
+    scroll-margin-top: 80px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #FED14D 70%, #ffe187);
+    /* background-size: 400% 400%; */
+    animation: gradientShift 8s ease-in-out infinite;
+    padding: 3rem; 
+    position: relative;
+    z-index: 350;
+    overflow: hidden;
+}
+
 .old_price {
     text-decoration: line-through;
     opacity: 0.55;
@@ -1981,7 +1998,27 @@ body {
     margin: 0;
 }
 
+.ticket h1 {
+    font-size: 6rem;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    line-height: 1;
+    z-index: 350;
+    text-align: center;
+    margin: 0;
+}
+
 .conference_cta p {
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    width: 40ch;
+    line-height: normal;
+    z-index: 350;
+    text-align: center;
+}
+
+.ticket p {
     font-size: 1.5rem;
     color: rgb(0, 0, 0);
     font-weight: 400;
@@ -1999,7 +2036,26 @@ body {
     width: 100%;
 }
 
+.ticket .note {
+    margin-top: -3rem;
+    font-size: 1rem;
+    color: black;
+    white-space: nowrap;
+    width: 100%;
+}
+
 .conference_cta iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 270px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    z-index: 350;
+    scrollbar-width: none;
+    -ms-overflow-style: none
+}
+.ticket iframe {
     width: 100%;
     max-width: 800px;
     height: 270px;

@@ -881,8 +881,8 @@ span.status {
 
 .video_play_btn {
     position: absolute;
-    bottom: 160px;
-    right: 105px;
+    bottom: 200px;
+    right: 130px;
     width: 44px;
     height: 44px;
     /* background-color: rgba(0, 0, 0, 0.7); */

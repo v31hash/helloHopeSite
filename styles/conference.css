@@ -2089,10 +2089,17 @@ span.status {
 }
 
 @media (max-width: 480px) {
+    .ticket {
+        padding: 9rem 1rem 3rem 1rem;
+    }
+    .ticket iframe {
+        height: 270px;
+        margin-bottom: 1rem;
+    }
+
     .conference_cta {
         padding: 9rem 1rem 3rem 1rem;
     }
-
     .conference_cta iframe {
         height: 270px;
         margin-bottom: 1rem;
@@ -2556,16 +2563,29 @@ span.status {
     }
     
     /* Mobile responsive adjustments for CTA section */
+    .ticket h1 {
+        font-size: 4rem;
+        margin-bottom: 0;
+    }    
+    .ticket p {
+        font-size: 1.2rem;
+        width: 35ch;
+    }    
+    .ticket::after {
+        width: 60px;
+        height: 60px;
+        top: 15%;
+        right: 15%;
+    }
+
     .conference_cta h1 {
         font-size: 4rem;
         margin-bottom: 0;
-    }
-    
+    }    
     .conference_cta p {
         font-size: 1.2rem;
         width: 35ch;
-    }
-    
+    }    
     .conference_cta::after {
         width: 60px;
         height: 60px;

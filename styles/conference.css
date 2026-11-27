@@ -2355,9 +2355,11 @@ span.status {
 
     .hero_top {
         display: grid;
+        grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        align-items: end;
+        justify-content: normal;
         justify-items: center;
+        align-items: end;
         text-align: center;
     }
     .hero_top img {

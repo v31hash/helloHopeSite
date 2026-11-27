@@ -2356,8 +2356,9 @@ span.status {
     .hero_top {
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
-        align-items: flex-end;
-        /* position: relative;      */
+        align-items: end;
+        justify-items: center;
+        text-align: center;
     }
     .hero_top img {
         width: 4rem;

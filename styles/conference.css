@@ -2353,15 +2353,27 @@ span.status {
         padding: 1.5rem;
     }
 
-
+    .hero_top {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        align-items: flex-end;
+        /* position: relative;      */
+    }
     .hero_top img {
         width: 4rem;
-        height: 4rem;
+        height: auto;
     }
-
     .hero_top .ajax_logo {
         width: auto;
         height: 2rem;
+    }
+
+    .countdown_number {
+        font-size: 0.75rem;
+        /* font-weight: 700; */
+    }
+    .countdown_label {
+        font-size: 0.5rem;
     }
     
     .hero_middle h1 {
